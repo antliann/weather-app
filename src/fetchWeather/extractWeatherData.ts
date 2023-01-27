@@ -1,23 +1,5 @@
-import { type WeatherData } from '../constants';
-
-interface ForecastRecord {
-  main: {
-    temp: number;
-  };
-  weather: Array<{
-    main: string;
-    icon: string;
-  }>;
-  dt: number;
-  dt_txt: string;
-}
-
-interface WeatherResponseData {
-  list: ForecastRecord[];
-  city: {
-    timezone: number;
-  };
-}
+import type { WeatherData } from '../constants';
+import type { WeatherResponseData } from './types';
 
 const getTimezoneDay = (timestamp: number, offsetInSeconds: number) => {
   const timestampWithOffset = timestamp + offsetInSeconds * 1000;
@@ -32,14 +14,12 @@ export const extractWeatherData = (
   const { timezone } = data.city;
   const currentTimezoneDay = getTimezoneDay(Date.now(), timezone);
 
-  const nextDaysForecast = data.list
-    .filter(record => {
-      const recordDay = getTimezoneDay(record.dt * 1000, timezone);
-      return (
-        recordDay !== currentTimezoneDay && record.dt_txt.endsWith('12:00:00')
-      );
-    })
-    .slice(0, 4);
+  const nextDaysForecast = data.list.filter(record => {
+    const recordDay = getTimezoneDay(record.dt * 1000, timezone);
+    return (
+      recordDay !== currentTimezoneDay && record.dt_txt.endsWith('12:00:00')
+    );
+  });
 
   return [closestRecord, ...nextDaysForecast].map((record, index) => ({
     temperature: Math.round(record.main.temp),
