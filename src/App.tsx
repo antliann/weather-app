@@ -1,5 +1,5 @@
 import React from 'react';
-import { CitiesBar } from './components';
+import { CitiesBar, WeatherGrid } from './components';
 import { City } from './constants';
 
 interface AppState {
@@ -25,6 +25,7 @@ class App extends React.Component<any, AppState> {
           currentCity={this.state.currentCity}
           onSelectCity={this.onSelectCity}
         />
+        <WeatherGrid city={this.state.currentCity} />
       </div>
     );
   }
