@@ -7,6 +7,6 @@ interface WeatherGridProps {
 
 export class WeatherGrid extends React.Component<WeatherGridProps> {
   render() {
-    return <div>WeatherGrid</div>;
+    return <div></div>;
   }
 }
