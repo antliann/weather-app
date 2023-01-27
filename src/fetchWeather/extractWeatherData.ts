@@ -42,7 +42,7 @@ export const extractWeatherData = (
     .slice(0, 4);
 
   return [closestRecord, ...nextDaysForecast].map((record, index) => ({
-    temperature: record.main.temp,
+    temperature: Math.round(record.main.temp),
     description: record.weather[0].main,
     icon: record.weather[0].icon,
     weekDay: currentTimezoneDay + index,
