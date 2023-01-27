@@ -6,7 +6,8 @@
     "extends": [
         "plugin:react/recommended",
         "standard-with-typescript",
-        "eslint:recommended"
+        "eslint:recommended",
+        "plugin:prettier/recommended"
     ],
     "overrides": [
     ],
