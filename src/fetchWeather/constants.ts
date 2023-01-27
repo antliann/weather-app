@@ -1,7 +1,4 @@
-export const BASE_URL = 'https://api.openweathermap.org/data/2.5';
-
-export const REALTIME_ENDPOINT = '/weather';
-export const FORECAST_ENDPOINT = '/forecast';
+export const URL = 'https://api.openweathermap.org/data/2.5/forecast';
 
 export const DEFAULT_REQUEST_PARAMS = {
   units: 'metric',
