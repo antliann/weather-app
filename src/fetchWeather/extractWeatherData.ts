@@ -36,7 +36,7 @@ export const extractWeatherData = (
     .filter(record => {
       const recordDay = getTimezoneDay(record.dt * 1000, timezone);
       return (
-        record.dt_txt.endsWith('12:00:00') && recordDay !== currentTimezoneDay
+        recordDay !== currentTimezoneDay && record.dt_txt.endsWith('12:00:00')
       );
     })
     .slice(0, 4);
