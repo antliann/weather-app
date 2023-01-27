@@ -1,7 +1,7 @@
 import type { WeatherData } from '../constants';
 import type { WeatherResponseData } from './types';
 
-const getTimezoneDay = (timestamp: number, offsetInSeconds: number) => {
+const getTimezoneDay = (timestamp: number, offsetInSeconds: number): number => {
   const timestampWithOffset = timestamp + offsetInSeconds * 1000;
   return new Date(timestampWithOffset).getUTCDay();
 };
