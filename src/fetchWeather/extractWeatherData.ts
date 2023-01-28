@@ -1,13 +1,15 @@
-import { DAYS_IN_WEEK, DAYS_TO_EXTRACT } from './constants';
 import type { WeatherData } from '../constants';
 import type { WeatherResponseData } from './types';
+
+const DAYS_IN_WEEK = 7;
+const DAYS_TO_EXTRACT = 5;
+const MS_IN_SECONDS = 1000;
 
 const getTimezoneWeekDay = (
   timestampInSec: number,
   offsetInSec: number
 ): number => {
-  const shiftedTimestamp = (timestampInSec + offsetInSec) * 1000;
-
+  const shiftedTimestamp = (timestampInSec + offsetInSec) * MS_IN_SECONDS;
   return new Date(shiftedTimestamp).getUTCDay();
 };
 
