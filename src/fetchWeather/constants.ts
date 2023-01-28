@@ -3,7 +3,6 @@ import { City } from '../constants';
 export const URL = 'https://api.openweathermap.org/data/3.0/onecall';
 
 export const DEFAULT_REQUEST_PARAMS = {
-  cnt: 5,
   units: 'metric',
   exclude: 'current,minutely,hourly,alerts',
   appid: process.env.REACT_APP_OPENWEATHER_API_KEY, // this is INSECURE and would not be used in a real-world project
@@ -19,3 +18,4 @@ export const MAP_CITY_TO_COORDINATES: Record<
 };
 
 export const DAYS_IN_WEEK = 7;
+export const DAYS_TO_EXTRACT = 5;
