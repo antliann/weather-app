@@ -2,16 +2,22 @@ import { DAYS_IN_WEEK, DAYS_TO_EXTRACT } from './constants';
 import type { WeatherData } from '../constants';
 import type { WeatherResponseData } from './types';
 
-const getTimezoneWeekDay = (offsetInSeconds: number): number => {
-  const shiftedTimestamp = Date.now() + offsetInSeconds * 1000;
+const getTimezoneWeekDay = (
+  timestampInSec: number,
+  offsetInSec: number
+): number => {
+  const shiftedTimestamp = (timestampInSec + offsetInSec) * 1000;
+
   return new Date(shiftedTimestamp).getUTCDay();
 };
 
 export const extractWeatherData = (
   responseData: WeatherResponseData
 ): WeatherData[] => {
-  const { timezone_offset: timezoneOffset } = responseData;
-  const currentTimezoneWeekDay = getTimezoneWeekDay(timezoneOffset);
+  const currentTimezoneWeekDay = getTimezoneWeekDay(
+    responseData.daily[0].dt,
+    responseData.timezone_offset
+  );
 
   const responseDataToMap = responseData.daily.slice(0, DAYS_TO_EXTRACT);
 

@@ -3,7 +3,7 @@ import { type WeatherData, type City } from '../constants';
 import {
   DEFAULT_REQUEST_PARAMS,
   MAP_CITY_TO_COORDINATES,
-  URL,
+  BASE_URL,
 } from './constants';
 import { extractWeatherData } from './extractWeatherData';
 import { type WeatherResponseData } from './types';
@@ -18,6 +18,6 @@ export const fetchWeather = (city: City): Promise<WeatherData[]> => {
   };
 
   return axios
-    .get<WeatherResponseData>(URL, { params: requestParams })
+    .get<WeatherResponseData>(BASE_URL, { params: requestParams })
     .then(response => extractWeatherData(response.data));
 };
