@@ -17,3 +17,5 @@ export const MAP_CITY_TO_COORDINATES: Record<
   [City.Moscow]: [55.7522, 37.6156],
   [City.Tokyo]: [35.6895, 139.6917],
 };
+
+export const DAYS_IN_WEEK = 7;

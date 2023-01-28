@@ -1,3 +1,4 @@
+import { DAYS_IN_WEEK } from './constants';
 import type { WeatherData } from '../constants';
 import type { WeatherResponseData } from './types';
 
@@ -17,6 +18,6 @@ export const extractWeatherData = (
     temperature: Math.round(record.temp.day),
     description: record.weather[0].main,
     icon: record.weather[0].icon,
-    weekDay: currentTimezoneWeekDay + index,
+    weekDay: (currentTimezoneWeekDay + index) % DAYS_IN_WEEK,
   }));
 };
