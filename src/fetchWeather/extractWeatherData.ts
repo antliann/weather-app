@@ -1,9 +1,9 @@
 import type { WeatherData } from '../constants';
 import type { WeatherResponseData } from './types';
 
-const getTimezoneDay = (offsetInSeconds: number): number => {
-  const timestampWithOffset = Date.now() + offsetInSeconds * 1000;
-  return new Date(timestampWithOffset).getUTCDay();
+const getTimezoneWeekDay = (offsetInSeconds: number): number => {
+  const shiftedTimestamp = Date.now() + offsetInSeconds * 1000;
+  return new Date(shiftedTimestamp).getUTCDay();
 };
 
 export const extractWeatherData = (
@@ -11,12 +11,12 @@ export const extractWeatherData = (
 ): WeatherData[] => {
   const { timezone_offset: timezoneOffset } = responseData;
 
-  const currentTimezoneDay = getTimezoneDay(timezoneOffset);
+  const currentTimezoneWeekDay = getTimezoneWeekDay(timezoneOffset);
 
   return responseData.daily.map((record, index) => ({
     temperature: Math.round(record.temp.day),
     description: record.weather[0].main,
     icon: record.weather[0].icon,
-    weekDay: currentTimezoneDay + index,
+    weekDay: currentTimezoneWeekDay + index,
   }));
 };
