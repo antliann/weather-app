@@ -40,7 +40,7 @@ export class WeatherGrid extends React.Component<
   async updateWeather() {
     this.setState({ isLoading: true });
 
-    const weather = await fetchWeather(this.props.city).catch(() => null);
+    const weather = await fetchWeather(this.props.city);
 
     if (weather) {
       this.setState({ weather, isLoading: false, isError: false });
