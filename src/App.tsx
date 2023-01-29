@@ -1,5 +1,5 @@
 import React from 'react';
-import { CitiesBar, WeatherGrid } from './components';
+import { CitiesBar, WeatherBoard } from './components';
 import { City } from './constants';
 import styles from './App.less';
 
@@ -27,7 +27,7 @@ class App extends React.Component<any, AppState> {
             currentCity={this.state.currentCity}
             onSelectCity={this.onSelectCity}
           />
-          <WeatherGrid city={this.state.currentCity} />
+          <WeatherBoard city={this.state.currentCity} />
         </div>
       </div>
     );

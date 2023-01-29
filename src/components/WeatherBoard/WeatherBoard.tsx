@@ -1,25 +1,25 @@
 import React from 'react';
 import { fetchWeather } from '../../fetchWeather';
 import { type WeatherData, type City } from '../../constants';
-import styles from './WeatherGrid.less';
+import styles from './WeatherBoard.less';
 
 export const WEEK_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-interface WeatherGridProps {
+interface WeatherBoardProps {
   city: City;
 }
 
-interface WeatherGridState {
+interface WeatherBoardState {
   weather: WeatherData[];
   isError: boolean;
   isLoading: boolean;
 }
 
-export class WeatherGrid extends React.Component<
-  WeatherGridProps,
-  WeatherGridState
+export class WeatherBoard extends React.Component<
+  WeatherBoardProps,
+  WeatherBoardState
 > {
-  constructor(props: WeatherGridProps) {
+  constructor(props: WeatherBoardProps) {
     super(props);
     this.state = {
       weather: [],
@@ -32,7 +32,7 @@ export class WeatherGrid extends React.Component<
     void this.updateWeather();
   }
 
-  componentDidUpdate(prevProps: Readonly<WeatherGridProps>) {
+  componentDidUpdate(prevProps: Readonly<WeatherBoardProps>) {
     if (prevProps.city !== this.props.city) {
       void this.updateWeather();
     }
