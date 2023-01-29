@@ -51,18 +51,21 @@ export class WeatherBoard extends React.Component<
   }
 
   render() {
+    const [todayWeather, ...weekDaysWeather] = this.state.weather;
+
     return (
       <div className={styles.board}>
-        {this.state.isLoading && <div>Loading...</div>}
-        {this.state.isError && <div>Error</div>}
-        {this.state.weather.map(weather => (
-          <div key={weather.weekDay}>
-            <div>{WEEK_DAYS[weather.weekDay]}</div>
-            <div>{weather.temperature}</div>
-            <div>{weather.description}</div>
-            <div>{weather.icon}</div>
-          </div>
-        ))}
+        <div className={styles.todaySection}>{todayWeather.temperature}</div>
+        <div className={styles.weekDaysSection}>
+          {weekDaysWeather.map(weather => (
+            <div key={weather.weekDay} className={styles.weekDay}>
+              <div>{WEEK_DAYS[weather.weekDay]}</div>
+              <div>{weather.temperature}</div>
+              <div>{weather.description}</div>
+              <div>{weather.icon}</div>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

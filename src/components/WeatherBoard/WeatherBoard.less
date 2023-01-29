@@ -1,15 +1,43 @@
 @import '../../base.less';
 
-@gap: 8px;
+@gap: 5px;
 @outer-radius: 15px;
 @inner-radius: @outer-radius - @gap;
 
-@board-height: 620px;
 @board-bg-color: #FFFFFF;
 
 .board {
-    height: @board-height;
+    padding: @gap;
     border-radius: @outer-radius;
 
     background-color: @board-bg-color;
+}
+
+.todaySection {
+    .backgroundFill();
+
+    height: 300px;
+    margin-bottom: @gap;
+
+    border-top-left-radius: @inner-radius;
+    border-top-right-radius: @inner-radius;
+}
+
+.weekDaysSection {
+    border-bottom-left-radius: @inner-radius;
+    border-bottom-right-radius: @inner-radius;
+
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: @gap;
+
+    height: 212px;
+    overflow: hidden;
+
+    .weekDay {
+        flex-grow: 1;
+        .backgroundFill();
+    }
 }
