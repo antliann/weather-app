@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchWeather } from '../../fetchWeather';
 import { type WeatherData, type City } from '../../constants';
+import styles from './WeatherGrid.less';
 
 export const WEEK_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -51,7 +52,7 @@ export class WeatherGrid extends React.Component<
 
   render() {
     return (
-      <div>
+      <div className={styles.board}>
         {this.state.isLoading && <div>Loading...</div>}
         {this.state.isError && <div>Error</div>}
         {this.state.weather.map(weather => (
