@@ -1,5 +1,5 @@
 import React from 'react';
-import { City } from '../constants';
+import { City } from '../../constants';
 
 const CITIES = [City.Ottawa, City.Moscow, City.Tokyo];
 

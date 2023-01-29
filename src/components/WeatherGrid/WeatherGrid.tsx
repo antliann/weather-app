@@ -1,6 +1,6 @@
 import React from 'react';
-import { type WeatherData, type City } from '../constants';
-import { fetchWeather } from '../fetchWeather';
+import { fetchWeather } from '../../fetchWeather';
+import { type WeatherData, type City } from '../../constants';
 
 export const WEEK_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
