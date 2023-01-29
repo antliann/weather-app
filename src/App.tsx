@@ -1,6 +1,7 @@
 import React from 'react';
 import { CitiesBar, WeatherGrid } from './components';
 import { City } from './constants';
+import styles from './App.less';
 
 interface AppState {
   currentCity: City;
@@ -20,12 +21,14 @@ class App extends React.Component<any, AppState> {
 
   render() {
     return (
-      <div>
-        <CitiesBar
-          currentCity={this.state.currentCity}
-          onSelectCity={this.onSelectCity}
-        />
-        <WeatherGrid city={this.state.currentCity} />
+      <div className={styles.background}>
+        <div className={styles.contentContainer}>
+          <CitiesBar
+            currentCity={this.state.currentCity}
+            onSelectCity={this.onSelectCity}
+          />
+          <WeatherGrid city={this.state.currentCity} />
+        </div>
       </div>
     );
   }
