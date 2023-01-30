@@ -1,7 +1,7 @@
 @import '../../base.less';
 
 @gap: 5px;
-@outer-radius: 15px;
+@outer-radius: 14px;
 @inner-radius: @outer-radius - @gap;
 
 @board-bg-color: #FFFFFF;
@@ -13,7 +13,14 @@
     background-color: @board-bg-color;
 }
 
+.centerContent() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .todaySection {
+    .centerContent();
     .backgroundFill();
 
     height: 300px;
@@ -38,6 +45,7 @@
 
     .weekDay {
         flex-grow: 1;
+        .centerContent();
         .backgroundFill();
     }
 }
