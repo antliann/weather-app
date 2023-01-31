@@ -33,8 +33,7 @@ export class WeatherIcon extends React.Component<
       iconSrc && (
         <img
           src={iconSrc}
-          width={this.props.small ? 80 : 180}
-          className={styles.icon}
+          className={this.props.small ? styles.smallIcon : styles.regularIcon}
           alt="Weather icon"
         />
       )

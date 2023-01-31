@@ -1,5 +1,14 @@
 @import '../../base.less';
 
-.icon {
-    filter: drop-shadow(1px 1px 1px @outline-color);
+.icon(@size, @shadowSize) {
+    width: @size;
+    filter: drop-shadow(@shadowSize @shadowSize @shadowSize @outline-color);
+}
+
+.regularIcon {
+    .icon(180px, 1px);
+}
+
+.smallIcon {
+    .icon(82px, 0.6px);
 }
