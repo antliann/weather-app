@@ -23,8 +23,8 @@ export class WeatherBoard extends React.Component<
     this.state = {
       weather: [
         {
-          temperature: -1,
-          description: 'Snow',
+          temperature: 19,
+          description: 'Clouds',
           id: 600,
           weekDay: 6,
         },

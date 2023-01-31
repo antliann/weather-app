@@ -1,0 +1,45 @@
+@import '../../base.less';
+
+.container() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temperatureText {
+    font-family: Teko;
+    font-weight: 400;
+    color: @text-color;
+}
+
+.todayContainer {
+    .container();
+
+    .weatherContainer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .temperature {
+        .temperatureText();
+        font-size: 90px;
+    }
+}
+
+.weekDayContainer {
+    .container();
+
+    .weekDayLabel {
+        font-size: 23px;
+    }
+
+    .weatherContainer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .temperature {
+        .temperatureText();
+        font-size: 50px;
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { type WeatherData } from '../../constants';
 import { WeatherIcon } from '../WeatherIcon';
+import styles from './WeatherCard.less';
 
 export const WEEK_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -11,13 +12,13 @@ const TodayWeatherCard: React.FC<WeatherCardProps> = ({
   temperature,
   description,
 }) => (
-  <div>
-    <div>Today</div>
-    <div>
+  <div className={styles.todayContainer}>
+    <p className={styles.todayLabel}>Today</p>
+    <div className={styles.weatherContainer}>
       <WeatherIcon weatherId={id} />
       <div>
-        <div>{temperature}°</div>
-        <div>{description}</div>
+        <span className={styles.temperature}>{temperature}°</span>
+        <p className={styles.description}>{description}</p>
       </div>
     </div>
   </div>
@@ -28,10 +29,10 @@ const WeekDayWeatherCard: React.FC<WeatherCardProps> = ({
   temperature,
   weekDay,
 }) => (
-  <div>
-    <div>{WEEK_DAYS[weekDay]}</div>
+  <div className={styles.weekDayContainer}>
+    <p className={styles.weekDayLabel}>{WEEK_DAYS[weekDay]}</p>
     <WeatherIcon weatherId={id} small />
-    <div>{temperature}°</div>
+    <span className={styles.temperature}>{temperature}°</span>
   </div>
 );
 
