@@ -1,8 +1,4 @@
-import type React from 'react';
-
-const ICONS_PATH = '@bybas/weather-icons/production/fill/all/';
-
-const MAP_WEATHER_ID_TO_ICON_ID: Record<number, string> = {
+export const MAP_WEATHER_ID_TO_ICON_ID: Record<number, string> = {
   200: 'thunderstorms-rain',
   201: 'thunderstorms-overcast-rain',
   202: 'thunderstorms-extreme-rain',
@@ -60,12 +56,12 @@ const MAP_WEATHER_ID_TO_ICON_ID: Record<number, string> = {
   804: 'extreme',
 };
 
-export type IconComponent = React.FunctionComponent<
-  React.SVGProps<SVGSVGElement>
->;
-
-export const getIconByWeatherId = (id: number): Promise<IconComponent> => {
+export const getIconByWeatherId = async (id: number) => {
   const iconId = MAP_WEATHER_ID_TO_ICON_ID[id];
 
-  return import(ICONS_PATH + iconId + '.svg');
+  const importedSvg = await import(
+    `@bybas/weather-icons/production/fill/all/${iconId}.svg`
+  );
+
+  return importedSvg.default as string;
 };

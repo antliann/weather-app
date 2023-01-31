@@ -5,8 +5,8 @@ export enum City {
 }
 
 export interface WeatherData {
+  id: number;
   temperature: number;
   description: string;
-  icon: string;
   weekDay: number;
 }

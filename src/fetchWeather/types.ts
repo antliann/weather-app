@@ -6,8 +6,8 @@ export interface WeatherResponseData {
       day: number;
     };
     weather: Array<{
+      id: number;
       main: string;
-      icon: string;
     }>;
   }>;
 }

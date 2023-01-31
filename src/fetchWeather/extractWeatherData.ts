@@ -27,9 +27,9 @@ export const extractWeatherData = (
   const weatherRecordsToMap = responseData.daily.slice(0, DAYS_TO_EXTRACT);
 
   return weatherRecordsToMap.map((record, index) => ({
+    id: record.weather[0].id,
     temperature: Math.round(record.temp.day),
     description: record.weather[0].main,
-    icon: record.weather[0].icon,
     weekDay: (currentTimezoneWeekDay + index) % DAYS_IN_WEEK,
   }));
 };

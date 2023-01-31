@@ -1,26 +1,43 @@
 import React from 'react';
-import { getIconByWeatherId, type IconComponent } from './getIconByWeatherId';
+import { getIconByWeatherId } from './getIconByWeatherId';
+import styles from './WeatherIcon.less';
 
 interface WeatherIconProps {
   weatherId: number;
-  small: boolean;
+  small?: boolean;
 }
 
 interface WeatherIconState {
-  Icon: IconComponent;
+  iconSrc: string | null;
 }
 
 export class WeatherIcon extends React.Component<
   WeatherIconProps,
   WeatherIconState
 > {
+  constructor(props: WeatherIconProps) {
+    super(props);
+    this.state = {
+      iconSrc: null,
+    };
+  }
+
   async componentDidMount() {
-    const Icon = await getIconByWeatherId(this.props.weatherId);
-    this.setState({ Icon });
+    const iconSrc = await getIconByWeatherId(this.props.weatherId);
+    this.setState({ iconSrc });
   }
 
   render() {
-    const { Icon } = this.state;
-    return <div className="weather-icon">{Icon && <Icon />}</div>;
+    const { iconSrc } = this.state;
+    return (
+      iconSrc && (
+        <img
+          src={iconSrc}
+          width={this.props.small ? 80 : 180}
+          className={styles.icon}
+          alt="Weather icon"
+        />
+      )
+    );
   }
 }
