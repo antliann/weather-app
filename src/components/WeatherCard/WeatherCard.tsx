@@ -13,12 +13,14 @@ const TodayWeatherCard: React.FC<WeatherCardProps> = ({
   description,
 }) => (
   <div className={styles.todayContainer}>
-    <p className={styles.todayLabel}>Today</p>
+    <p>Today</p>
     <div className={styles.weatherContainer}>
-      <WeatherIcon weatherId={id} />
+      <div className={styles.weatherIcon}>
+        <WeatherIcon weatherId={id} />
+      </div>
       <div>
         <span className={styles.temperature}>{temperature}°</span>
-        <p className={styles.description}>{description}</p>
+        <p>{description}</p>
       </div>
     </div>
   </div>

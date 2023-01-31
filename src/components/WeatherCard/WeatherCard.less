@@ -10,14 +10,22 @@
     font-family: Teko;
     font-weight: 400;
     color: @text-color;
+    line-height: 0.85;
 }
 
 .todayContainer {
     .container();
+    padding-top: 8px;
 
     .weatherContainer {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        margin: 5px 22px 0 0;
+    }
+
+    .weatherIcon {
+        margin-right: 6px;
     }
 
     .temperature {
