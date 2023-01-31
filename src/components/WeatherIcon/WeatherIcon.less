@@ -2,7 +2,11 @@
 
 .icon(@size, @shadowSize) {
     width: @size;
-    filter: drop-shadow(@shadowSize @shadowSize @shadowSize @outline-color);
+    filter:
+        drop-shadow(-@shadowSize -@shadowSize @outline-color)
+        drop-shadow(@shadowSize @shadowSize @shadowSize @outline-color)
+        drop-shadow(@shadowSize 0 @text-color)
+        drop-shadow(0 @shadowSize @text-color)
 }
 
 .regularIcon {
@@ -10,5 +14,5 @@
 }
 
 .smallIcon {
-    .icon(82px, 0.6px);
+    .icon(82px, 0.5px);
 }
