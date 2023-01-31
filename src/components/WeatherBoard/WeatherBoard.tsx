@@ -35,7 +35,7 @@ export class WeatherBoard extends React.Component<
           weekDay: 0,
         },
         {
-          temperature: -10,
+          temperature: -18,
           description: 'Snow',
           id: 314,
           weekDay: 1,
