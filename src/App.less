@@ -22,11 +22,10 @@ p, span, button {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
+    min-width: @min-screen-width;
 
     @media (min-width: @content-fit-width) {
         margin-left: calc(50% - @content-fit-width / 2);
         max-width: @content-fit-width;
     }
 }
-
-

@@ -1,5 +1,6 @@
 import React from 'react';
 import { City } from '../../constants';
+import styles from './CitiesBar.less';
 
 const CITIES = [City.Ottawa, City.Moscow, City.Tokyo];
 
@@ -8,24 +9,26 @@ interface CitiesBarProps {
   onSelectCity: (city: City) => void;
 }
 
-export class CitiesBar extends React.Component<CitiesBarProps> {
-  render() {
-    return (
-      <div>
-        {CITIES.map(city => (
+export const CitiesBar: React.FC<CitiesBarProps> = ({
+  currentCity,
+  onSelectCity,
+}) => {
+  return (
+    <nav className={styles.container}>
+      {CITIES.map(city => (
+        <div key={city} className={styles.buttonContainer}>
           <button
-            key={city}
+            className={
+              currentCity === city ? styles.selectedButton : styles.button
+            }
             onClick={() => {
-              this.props.onSelectCity(city);
-            }}
-            style={{
-              color: this.props.currentCity === city ? 'red' : 'black',
+              onSelectCity(city);
             }}
           >
             {city}
           </button>
-        ))}
-      </div>
-    );
-  }
-}
+        </div>
+      ))}
+    </nav>
+  );
+};

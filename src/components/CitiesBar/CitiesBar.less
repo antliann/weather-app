@@ -1,0 +1,46 @@
+@import '../../base.less';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 5.5% 4vw;
+
+    @media (max-width: @min-screen-width) {
+        padding: 20px (4 * @min-screen-width / 100);
+    }
+}
+
+.buttonContainer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    border: 0;
+    padding: 0;
+    background-color: unset;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    @button-font-size: 31px;
+    @font-size-screen-breakpoint: 660px;
+
+    font-size:  @button-font-size;
+    
+    @media (max-width: (@font-size-screen-breakpoint)) {
+        font-size: unit((@button-font-size / @font-size-screen-breakpoint * 100), vw);
+    }
+
+    @media (max-width: @min-screen-width) {
+        font-size: (@button-font-size / @font-size-screen-breakpoint * @min-screen-width);
+    }
+}
+
+.selectedButton {
+    .button();
+    color: @highlight-color;
+    font-weight: 700;
+    cursor: default;
+}
