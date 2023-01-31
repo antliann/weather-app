@@ -42,7 +42,7 @@ export const MAP_WEATHER_ID_TO_ICON_ID: Record<number, string> = {
   701: 'mist',
   711: 'smoke',
   721: 'haze',
-  731: 'dust-wing',
+  731: 'dust-wind',
   741: 'fog',
   751: 'dust',
   761: 'dust',
@@ -60,7 +60,7 @@ export const getIconByWeatherId = async (id: number) => {
   const iconId = MAP_WEATHER_ID_TO_ICON_ID[id];
 
   const importedSvg = await import(
-    `@bybas/weather-icons/production/fill/all/${iconId}.svg`
+    `@lxg/weather-icons/production/fill/svg/${iconId}.svg`
   );
 
   return importedSvg.default as string;
