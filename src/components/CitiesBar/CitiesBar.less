@@ -3,10 +3,13 @@
 .container {
     display: flex;
     flex-direction: row;
-    padding: 5.5% 4vw;
+
+    @padding-x-coeff: 4;
+
+    padding: 5.5% unit(@padding-x-coeff, vw);
 
     @media (max-width: @min-screen-width) {
-        padding: 20px (4 * @min-screen-width / 100);
+        padding: 20px (@padding-x-coeff * @min-screen-width / 100);
     }
 }
 
@@ -24,17 +27,18 @@
     cursor: pointer;
     text-transform: uppercase;
 
-    @button-font-size: 31px;
     @font-size-screen-breakpoint: 660px;
+    @button-font-size: 31px;
+    @button-font-size-coeff: unit((@button-font-size / @font-size-screen-breakpoint));
 
     font-size:  @button-font-size;
     
     @media (max-width: (@font-size-screen-breakpoint)) {
-        font-size: unit((@button-font-size / @font-size-screen-breakpoint * 100), vw);
+        font-size: unit(@button-font-size-coeff * 100, vw);
     }
 
     @media (max-width: @min-screen-width) {
-        font-size: (@button-font-size / @font-size-screen-breakpoint * @min-screen-width);
+        font-size: @button-font-size-coeff * @min-screen-width;
     }
 }
 
