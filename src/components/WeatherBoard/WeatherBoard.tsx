@@ -49,22 +49,36 @@ export class WeatherBoard extends React.Component<
     }
   }
 
+  renderTodaySection() {
+    if (this.state.isLoading) {
+      return null;
+    } else if (this.state.isError) {
+      return <p>The error occured while fetching weather.</p>;
+    } else {
+      return <WeatherCard.Today {...this.state.weather[0]} />;
+    }
+  }
+
+  renderWeekDaysSection() {
+    if (this.state.isLoading || this.state.isError) {
+      return <div className={styles.weekDay} />;
+    } else {
+      const weekDaysWeather = this.state.weather.slice(1);
+
+      return weekDaysWeather.map(weather => (
+        <div key={weather.weekDay} className={styles.weekDay}>
+          <WeatherCard.WeekDay {...weather} />
+        </div>
+      ));
+    }
+  }
+
   render() {
-    if (this.state.isError || this.state.isLoading) return null;
-
-    const [todayWeather, ...weekDaysWeather] = this.state.weather;
-
     return (
       <div className={styles.board}>
-        <div className={styles.todaySection}>
-          <WeatherCard.Today {...todayWeather} />
-        </div>
+        <div className={styles.todaySection}>{this.renderTodaySection()}</div>
         <div className={styles.weekDaysSection}>
-          {weekDaysWeather.map(weather => (
-            <div key={weather.weekDay} className={styles.weekDay}>
-              <WeatherCard.WeekDay {...weather} />
-            </div>
-          ))}
+          {this.renderWeekDaysSection()}
         </div>
       </div>
     );
