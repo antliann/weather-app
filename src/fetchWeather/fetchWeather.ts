@@ -8,7 +8,7 @@ import {
 import { extractWeatherData } from './extractWeatherData';
 import { type WeatherResponseData } from './types';
 
-export const fetchWeather = (city: City): Promise<WeatherData[] | null> => {
+export const fetchWeather = (city: City): Promise<WeatherData[]> => {
   const [latitude, longitude] = MAP_CITY_TO_COORDINATES[city];
 
   const requestParams = {
@@ -20,5 +20,5 @@ export const fetchWeather = (city: City): Promise<WeatherData[] | null> => {
   return axios
     .get<WeatherResponseData>(BASE_URL, { params: requestParams })
     .then(response => extractWeatherData(response.data))
-    .catch(() => null);
+    .catch(() => []);
 };

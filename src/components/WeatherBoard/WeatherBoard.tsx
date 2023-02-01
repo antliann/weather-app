@@ -42,7 +42,7 @@ export class WeatherBoard extends React.Component<
 
     const weather = await fetchWeather(this.props.city);
 
-    if (weather) {
+    if (weather.length) {
       this.setState({ weather, isLoading: false, isError: false });
     } else {
       this.setState({ isError: true, isLoading: false });
@@ -50,6 +50,8 @@ export class WeatherBoard extends React.Component<
   }
 
   render() {
+    if (this.state.isError || this.state.isLoading) return null;
+
     const [todayWeather, ...weekDaysWeather] = this.state.weather;
 
     return (
