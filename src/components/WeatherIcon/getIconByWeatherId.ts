@@ -1,5 +1,5 @@
 // Although Openweather API returns its own icon ids, they are poor enough,
-// and that's why icons in this app are mapped based on weather ids.
+// so in this app icons are mapped based on weather ids.
 // The list of ids descriptions is available on https://openweathermap.org/weather-conditions
 
 export const MAP_WEATHER_ID_TO_ICON_ID: Record<number, string> = {
