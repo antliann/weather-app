@@ -18,7 +18,7 @@ const TodayWeatherCard: React.FC<WeatherCardProps> = ({
       <div className={styles.weatherIcon}>
         <WeatherIcon weatherId={id} />
       </div>
-      <div>
+      <div className={styles.weatherTextData}>
         <span className={styles.temperature}>{temperature}°</span>
         <p>{description}</p>
       </div>
