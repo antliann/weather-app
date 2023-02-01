@@ -1,5 +1,5 @@
 import React from 'react';
-import { type WeatherData } from '../../constants';
+import { type WeatherData } from '../../types';
 import { WeatherIcon } from '../WeatherIcon';
 import styles from './WeatherCard.less';
 

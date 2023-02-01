@@ -1,4 +1,4 @@
-import type { WeatherData } from '../constants';
+import type { WeatherData } from '../types';
 import type { WeatherResponseData } from './types';
 
 const DAYS_IN_WEEK = 7;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { CitiesBar, WeatherBoard } from './components';
-import { City } from './constants';
+import { City } from './types';
 import styles from './App.less';
 
 interface AppState {

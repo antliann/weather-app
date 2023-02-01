@@ -1,7 +1,7 @@
 import React from 'react';
 import { fetchWeather } from '../../fetchWeather';
 import { WeatherCard } from '../WeatherCard';
-import { type WeatherData, type City } from '../../constants';
+import { type WeatherData, type City } from '../../types';
 import styles from './WeatherBoard.less';
 
 interface WeatherBoardProps {

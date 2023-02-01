@@ -1,4 +1,4 @@
-import { City } from '../constants';
+import { City } from '../types';
 
 export const BASE_URL = 'https://api.openweathermap.org/data/3.0/onecall';
 

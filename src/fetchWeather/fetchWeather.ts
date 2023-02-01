@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { type WeatherData, type City } from '../constants';
+import { type WeatherData, type City } from '../types';
 import {
   DEFAULT_REQUEST_PARAMS,
   MAP_CITY_TO_COORDINATES,
