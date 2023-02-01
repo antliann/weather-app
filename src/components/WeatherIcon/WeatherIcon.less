@@ -1,5 +1,8 @@
 @import '../../base.less';
 
+@regular-icon-size: 180px;
+@small-icon-size: 82px;
+
 .icon(@size, @shadowSize) {
     width: @size;
     filter:
@@ -10,9 +13,29 @@
 }
 
 .regularIcon {
-    .icon(180px, 1px);
+    .icon(@regular-icon-size, 1px);
 }
 
 .smallIcon {
-    .icon(82px, 0.5px);
+    .icon(@small-icon-size, 0.5px);
+}
+
+.iconPlaceholder(@size) {
+    @spacing: @size * 0.2;
+
+    margin: @spacing;
+    height: @size - @spacing * 2;
+    width: @size - @spacing * 2;
+
+    border-radius: 50%;
+    background-color: @text-color;
+    opacity: 0.05;
+}
+
+.regularPlaceholder {
+    .iconPlaceholder(@regular-icon-size);
+}
+
+.smallPlaceholder {
+    .iconPlaceholder(@small-icon-size);
 }

@@ -28,15 +28,18 @@ export class WeatherIcon extends React.Component<
   }
 
   render() {
-    const { iconSrc } = this.state;
-    return (
-      iconSrc && (
-        <img
-          src={iconSrc}
-          className={this.props.small ? styles.smallIcon : styles.regularIcon}
-          alt="Weather icon"
-        />
-      )
+    return this.state.iconSrc ? (
+      <img
+        src={this.state.iconSrc}
+        className={this.props.small ? styles.smallIcon : styles.regularIcon}
+        alt="Weather icon"
+      />
+    ) : (
+      <div
+        className={
+          this.props.small ? styles.smallPlaceholder : styles.regularPlaceholder
+        }
+      />
     );
   }
 }
