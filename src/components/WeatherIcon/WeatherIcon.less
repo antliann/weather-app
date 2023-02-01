@@ -22,10 +22,11 @@
 
 .iconPlaceholder(@size) {
     @spacing: @size * 0.2;
+    @actualSize: @size - @spacing * 2;
 
     margin: @spacing;
-    height: @size - @spacing * 2;
-    width: @size - @spacing * 2;
+    height: @actualSize;
+    width: @actualSize;
 
     border-radius: 50%;
     background-color: @text-color;
