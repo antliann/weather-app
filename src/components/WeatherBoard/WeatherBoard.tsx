@@ -27,7 +27,7 @@ export class WeatherBoard extends React.Component<
     };
   }
 
-  componentDidMount(): void {
+  componentDidMount() {
     void this.updateWeather();
   }
 

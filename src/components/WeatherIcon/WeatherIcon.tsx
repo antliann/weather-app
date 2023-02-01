@@ -32,7 +32,9 @@ export class WeatherIcon extends React.Component<
       <img
         src={this.state.iconSrc}
         className={this.props.small ? styles.smallIcon : styles.regularIcon}
-        alt="Weather icon"
+        onError={() => {
+          this.setState({ iconSrc: null });
+        }}
       />
     ) : (
       <div
