@@ -2,7 +2,7 @@
 // so in this app icons are mapped based on weather ids.
 // The list of ids descriptions is available on https://openweathermap.org/weather-conditions
 
-export const MAP_WEATHER_ID_TO_ICON_ID: Record<number, string> = {
+const MAP_WEATHER_ID_TO_ICON_ID: Record<number, string> = {
   200: 'thunderstorms-rain',
   201: 'thunderstorms-overcast-rain',
   202: 'thunderstorms-extreme-rain',
