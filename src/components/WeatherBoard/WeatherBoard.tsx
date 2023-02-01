@@ -80,6 +80,7 @@ export class WeatherBoard extends React.Component<
         <div className={styles.weekDaysSection}>
           {this.renderWeekDaysSection()}
         </div>
+        {this.state.isLoading && <div className={styles.loadingAnimation} />}
       </div>
     );
   }
