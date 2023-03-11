@@ -2,10 +2,13 @@ import { City } from '../types';
 
 export const BASE_URL = 'https://api.openweathermap.org/data/3.0/onecall';
 
+// this is INSECURE and would not be used in a real-world project
+const API_KEY = 'e998d374390eb402c069c1b6694be973';
+
 export const DEFAULT_REQUEST_PARAMS = {
   units: 'metric',
   exclude: 'current,minutely,hourly,alerts',
-  appid: process.env.REACT_APP_OPENWEATHER_API_KEY, // this is INSECURE and would not be used in a real-world project
+  appid: API_KEY,
 };
 
 export const MAP_CITY_TO_COORDINATES: Record<

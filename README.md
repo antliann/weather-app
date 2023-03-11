@@ -49,7 +49,3 @@ The app uses [OpenWeather API](https://openweathermap.org/api) to retrieve the w
 ├── react-app-env.d.ts
 └── types.ts
 ```
-
-## Notes
-
-The app requieres OpenWeather API key to be defined in env using `REACT_APP_OPENWEATHER_API_KEY` variable
