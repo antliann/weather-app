@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8022],{8022:function(a,e,s){a.exports=s.p+"static/media/flag-small-craft-advisory.a0dac587deb95786d7a0.svg"}}]);

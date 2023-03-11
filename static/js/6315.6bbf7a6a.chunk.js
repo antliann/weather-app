@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6315],{6315:function(e,a,t){e.exports=t.p+"static/media/thermometer-mercury.698604e7aee88fe4acae.svg"}}]);

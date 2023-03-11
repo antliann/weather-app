@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8058],{8058:function(e,a,t){e.exports=t.p+"static/media/thermometer-snow.2d49be3bba65ea5c1e56.svg"}}]);

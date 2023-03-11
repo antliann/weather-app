@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8312],{8312:function(e,a,t){e.exports=t.p+"static/media/time-afternoon.f53e1ab8807f8f3e593e.svg"}}]);

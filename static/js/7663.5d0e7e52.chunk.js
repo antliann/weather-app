@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[7663],{7663:function(e,t,a){e.exports=a.p+"static/media/extreme-night.48b5a2f7f1896c7e2fdd.svg"}}]);

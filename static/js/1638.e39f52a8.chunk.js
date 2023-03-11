@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1638],{1638:function(e,a,t){e.exports=t.p+"static/media/thunderstorms-extreme.a8964a090cda49fd8231.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[6495],{6495:function(e,t,a){e.exports=a.p+"static/media/dust-night.ee5119218c6f5ad01281.svg"}}]);

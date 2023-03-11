@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3451],{3451:function(e,s,t){e.exports=t.p+"static/media/thermometer-glass-celsius.54453334b63b3f88b1c6.svg"}}]);

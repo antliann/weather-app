@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[9296],{9296:function(e,a,p){e.exports=p.p+"static/media/extreme-day-snow.bfdef5ebd5ae28b005c5.svg"}}]);

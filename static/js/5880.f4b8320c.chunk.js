@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[5880],{5880:function(e,a,p){e.exports=p.p+"static/media/wind-beaufort-2.b9224d4b2e75697abff4.svg"}}]);

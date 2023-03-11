@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8597],{8597:function(e,a,p){e.exports=p.p+"static/media/fahrenheit.86828f9db296d0688896.svg"}}]);

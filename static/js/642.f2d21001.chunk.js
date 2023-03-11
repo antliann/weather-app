@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[642],{642:function(e,a,p){e.exports=p.p+"static/media/pressure-high-alt.e4eab1bc6244febfec66.svg"}}]);

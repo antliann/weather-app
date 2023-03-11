@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3637],{3637:function(e,p,s){e.exports=s.p+"static/media/pressure-low.e0109dd2ca9b36523166.svg"}}]);

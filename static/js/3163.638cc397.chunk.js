@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3163],{3163:function(e,s,t){e.exports=t.p+"static/media/overcast-night-snow.875fd585852f30eb63c1.svg"}}]);

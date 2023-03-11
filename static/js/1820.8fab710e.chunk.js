@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[1820],{1820:function(e,a,p){e.exports=p.p+"static/media/extreme-day-hail.eda0b91ace3742408663.svg"}}]);

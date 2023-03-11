@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[2157],{2157:function(a,e,p){a.exports=p.p+"static/media/flag-gale-warning.61252832fa36981196c5.svg"}}]);

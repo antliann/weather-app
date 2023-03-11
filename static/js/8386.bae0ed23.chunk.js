@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8386],{8386:function(e,a,c){e.exports=c.p+"static/media/alert-avalanche-danger.95c77f82cac069b1e034.svg"}}]);

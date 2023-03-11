@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[8708],{8708:function(a,e,c){a.exports=c.p+"static/media/compass.9cb1b5282a4cacc65d59.svg"}}]);

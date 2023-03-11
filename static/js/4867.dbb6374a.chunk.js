@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[4867],{4867:function(e,a,c){e.exports=c.p+"static/media/extreme-day.c5a79e3ecc8122c2d59c.svg"}}]);

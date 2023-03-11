@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkweather_app=self.webpackChunkweather_app||[]).push([[3554],{4273:function(e,t,a){e.exports=a.p+"static/media/thermometer-colder.49ad54c1d017760271f3.svg"}}]);
