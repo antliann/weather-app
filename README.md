@@ -5,7 +5,7 @@ The app uses [OpenWeather API](https://openweathermap.org/api) to retrieve the w
 
 ## The app can be accessed via the link:
 
-### [will be added soon]
+### https://antliann.github.io/weather-app
 
 
 ## Features:
